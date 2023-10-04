@@ -2,6 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Number guessing game</title>
     <script src="./script.js" defer></script>
@@ -22,7 +23,7 @@
         margin: 16px 0;
       }
 
-      body {
+      section {
         height: 100dvh;
         width: 100dvw;
         display: flex;
@@ -31,9 +32,8 @@
         font-size: 16px;
       }
 
-      section {
-        width: 50%;
-        min-width: 400px;
+      main {
+        max-width: 480px;
         margin: 0 auto;
       }
       
@@ -71,14 +71,10 @@
 
       @media only screen and (max-width: 480px) {
 
-        body {
-          margin: 0;
-      }
-
-        section {
-          width: 100%;
+        main {
+          margin: 0 2.25rem;
         }
-        
+
       }
 
 
@@ -87,22 +83,25 @@
 
   <body>
     <section>
-      <h1>Number guessing game</h1>
+      <main>
+        <h1>Number guessing game</h1>
 
-      <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
-  
-      <div class="form">
-        <label for="guessField">Enter a guess</label><br>
-        <input type="number" min="1" max="100" required id="guessField" class="guessField"><br>
-        <input type="submit" value="Submit guess" class="guessSubmit">
-      </div>
-  
-      <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult spacing"></p>
-        <p class="lowOrHi"></p>
-        <button class="spacing">Restart Game</button>
-      </div>
+        <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    
+        <div class="form">
+          <label for="guessField">Enter a guess</label><br>
+          <input type="number" min="1" max="100" required id="guessField" class="guessField"><br>
+          <input type="submit" value="Submit guess" class="guessSubmit">
+        </div>
+    
+        <div class="resultParas">
+          <p class="guesses"></p>
+          <p class="lastResult spacing"></p>
+          <p class="lowOrHi"></p>
+          <button class="spacing">Restart Game</button>
+        </div>
+      </main>
+
     </section>
   </body>
 </html>
